@@ -76,7 +76,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
  if ((char)payload[0] == '0') {
     digitalWrite(2, HIGH);  // Turn the LED off by making the voltage HIGH
     digitalWrite(4, LOW); // arret gauche
-    digitalWrite(5, LOW); // arret droite
+    digitalWrite(5, LOW); // arret droit
   }
   
 }
