@@ -1,56 +1,53 @@
-# Authome
+# 🔌 Authome - Supervision à Distance des Appareils Électriques
 
-**Système de supervision à distance des appareils électriques**
+**Authome** est un projet de supervision et de contrôle d'appareils électriques à distance. Il permet d'interagir avec un moteur électrique à travers une interface graphique et de surveiller les conditions environnementales via un capteur DHT11.
 
-Ce projet de fin d'études consiste à créer une interface graphique pour contrôler et superviser un moteur électrique.
+## 🎯 Objectif du Projet
+- Développer une interface intuitive pour la supervision et le contrôle à distance.
+- Exploiter la puissance du **NodeMCU v1** et du protocole **MQTT** pour la communication.
+- Assurer une gestion efficace des relais pour l'activation des appareils électriques.
 
-## Composants
+## 🛠️ Composants Utilisés
+- **NodeMCU v1** – Microcontrôleur WiFi pour la communication MQTT.
+- **DHT11** – Capteur de température et d'humidité (connecté sur **D1**).
+- **2 relais** – Pour contrôler les appareils électriques.
 
-- NodeMCU v1
-- DHT11 (connecté au pin D1 du NodeMCU)
-- 2 relais
+## 🚀 Installation et Configuration
+### 1️⃣ **Téléversement du Code**
+- Chargez le fichier **Arduino** sur votre **NodeMCU v1** en utilisant **Arduino IDE**.
 
-## Guide d'utilisation
+### 2️⃣ **Importation du Fichier JSON**
+- Importez le fichier **JSON** dans un nouveau projet **Node-RED** pour l'affichage et le contrôle.
 
-1. **Téléversement du code :** Uploadez le fichier Arduino sur un NodeMCU (ici V1).
-2. **Importation du fichier JSON :** Importez le fichier JSON dans un nouveau projet Node-RED.
-3. **Configuration du serveur Mosquitto :**
-
-   - Installez Mosquitto [Debian] ou Raspberry :
-
-     ```bash
-     sudo apt-get install mosquitto
-     ```
-
-   - La configuration est fournie dans mosquitto.conf.
-   - Pour démarrer le serveur avec la configuration `mosquitto.conf`, utilisez la commande suivante :
-
-     ```bash
-     mosquitto -c /etc/mosquitto/conf.d/mosquitto.conf
-     ```
-
-   Tout devrait fonctionner maintenant... enfin, normalement ! 😊
-
-## Détails du Projet Authome
-
-### Objectif
-
-Conception et réalisation d’un outil de supervision des appareils électriques.
-
-### Software
-
-- Configuration du serveur MQTT
-- Développement d’IHM pour la supervision des appareils sous Node-RED
-- Programmation d'une carte NodeMCU via Arduino IDE
-- Mise en communication des différents blocs
-
-### Hardware
-
-- Conception du circuit de commande
-
-## Commandes MQTT sous Linux (Kernel)
-
-- **Créer une session avec la configuration :**
-
-  ```bash
+### 3️⃣ **Configuration du Serveur Mosquitto**
+- Installez **Mosquitto** sur **Debian** ou **Raspberry Pi** :
+  ```sh
+  sudo apt-get install mosquitto
+  ```
+- Utilisez le fichier de configuration fourni : **mosquitto.conf**.
+- Démarrez le serveur MQTT avec la commande :
+  ```sh
   mosquitto -c /etc/mosquitto/conf.d/mosquitto.conf
+  ```
+- **Testez la communication MQTT** et vérifiez le bon fonctionnement du système. 🎉
+
+## 📜 Détails du Projet
+### **Software**
+✅ Configuration et gestion du serveur **MQTT**.  
+✅ Développement d'une **interface Node-RED** pour la supervision.  
+✅ Programmation du **NodeMCU** avec **Arduino IDE**.  
+✅ Établissement d'une communication fluide entre les différents blocs.  
+
+### **Hardware**
+✅ Conception d'un **circuit de commande** fiable et sécurisé.  
+✅ Intégration des **capteurs et actionneurs** (DHT11 + relais).  
+
+## 🔧 Commandes MQTT sous Linux
+Créer une session MQTT avec la configuration :
+```sh
+mosquitto -c /etc/mosquitto/conf.d/mosquitto.conf
+```
+
+---
+⚡ **Supervisez vos appareils électriques facilement avec Authome !** 🔥
+
